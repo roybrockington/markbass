@@ -39,7 +39,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
+    <nav className="sticky top-0 z-50 bg-black shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -68,7 +68,7 @@ export default function Navigation() {
                 {link.submenu ? (
                   <>
                     <button
-                      className="flex items-center text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors"
+                      className="flex items-center text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors"
                     >
                       {link.label}
                       <ChevronDown className="ml-1 h-4 w-4" />
@@ -97,7 +97,7 @@ export default function Navigation() {
                 ) : (
                   <Link
                     href={link.href}
-                    className="flex items-center text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors"
+                    className="flex items-center text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -112,21 +112,21 @@ export default function Navigation() {
             <div className="hidden md:flex items-center space-x-4">
               <button
                 type="button"
-                className="p-2 text-gray-700 hover:text-yellow-500 transition-colors"
+                className="p-2 text-yellow-500 hover:text-yellow-400 transition-colors"
                 aria-label="Search"
               >
                 <Search className="h-5 w-5" />
               </button>
               <Link
                 href="/account"
-                className="p-2 text-gray-700 hover:text-yellow-500 transition-colors"
+                className="p-2 text-yellow-500 hover:text-yellow-400 transition-colors"
                 aria-label="Account"
               >
                 <User className="h-5 w-5" />
               </Link>
               <Link
                 href="/basket"
-                className="p-2 text-gray-700 hover:text-yellow-500 transition-colors"
+                className="p-2 text-yellow-500 hover:text-yellow-400 transition-colors"
                 aria-label="Shopping basket"
               >
                 <ShoppingBag className="h-5 w-5" />
@@ -137,14 +137,14 @@ export default function Navigation() {
             <div className="flex md:hidden items-center space-x-2">
               <button
                 type="button"
-                className="p-2 text-gray-700 hover:text-yellow-500 transition-colors"
+                className="p-2 text-yellow-500 hover:text-yellow-400 transition-colors"
                 aria-label="Search"
               >
                 <Search className="h-5 w-5" />
               </button>
               <Link
                 href="/basket"
-                className="p-2 text-gray-700 hover:text-yellow-500 transition-colors"
+                className="p-2 text-yellow-500 hover:text-yellow-400 transition-colors"
                 aria-label="Shopping basket"
               >
                 <ShoppingBag className="h-5 w-5" />
@@ -152,7 +152,7 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={toggleMobileMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-yellow-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-yellow-500 hover:text-yellow-400 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500 transition-colors"
                 aria-expanded={mobileMenuOpen}
               >
                 <span className="sr-only">
@@ -202,14 +202,14 @@ export default function Navigation() {
           mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-black border-t border-gray-800">
           {navLinks.map((link) => (
             <div key={link.href}>
               {link.submenu ? (
                 <>
                   <button
                     onClick={toggleMobileProductsSubmenu}
-                    className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-500 hover:bg-gray-50 transition-colors"
+                    className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900 transition-colors"
                   >
                     {link.label}
                     <ChevronDown
@@ -230,7 +230,7 @@ export default function Navigation() {
                           key={sublink.href}
                           href={sublink.href}
                           onClick={closeMobileMenu}
-                          className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-yellow-500 hover:bg-gray-50 transition-colors"
+                          className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-yellow-500 hover:bg-gray-900 transition-colors"
                         >
                           {sublink.label}
                         </Link>
@@ -242,7 +242,7 @@ export default function Navigation() {
                 <Link
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-500 hover:bg-gray-50 transition-colors"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-500 hover:bg-gray-900 transition-colors"
                 >
                   {link.label}
                 </Link>
